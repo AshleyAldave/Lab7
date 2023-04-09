@@ -1,0 +1,82 @@
+<html>    
+<head>
+    <h1 style="color:gray;font-size:40px;font-family:Courier; text-align: center;">Change Border and Background Color!</h1>
+</head>
+
+<script>
+    function change_style() {
+        var Red_Border = document.getElementById("Red_Border").value;
+        var Green_Border = document.getElementById("Green_Border").value;
+        var Blue_Border = document.getElementById("Blue_Border").value;
+        var border_val = document.getElementById("size_of_border").value;
+        var Red_Background = document.getElementById("Red_Background").value;
+        var Green_Background = document.getElementById("Green_Background").value;
+        var Blue_Background = document.getElementById("Blue_Background").value;
+        
+        var tag = document.getElementById("paragraph");
+        tag.style.borderColor = `rgb(${Red_Border},${Green_Border},${Blue_Border})`;
+        tag.style.borderWidth = border_val
+        tag.style.backgroundColor = `rgb(${Red_Background},${Green_Background},${Blue_Background})`;
+    }
+</script>
+
+<style>
+    #paragraph {border-style: solid; font-family: "Courier New", monospace; font-weight: bold; border-width: 1px;}
+
+    table, th{ border: 1px solid black; font-weight: lighter; font-variant: small-caps;}
+    h2 {font-family: monospace; text-align: center; font-weight: bold; font-size: large; color: grey;}
+</style>
+
+    <body style="background-color:#c6b7df;"> 
+        <div id="paragraph">
+        <center>
+            Folklore is the eighth studio album by American singer-songwriter Taylor Swift. 
+            It was a surprise album, released on July 24, 2020, via Republic Records 
+            after the outbreak of the COVID-19 pandemic in early 2020. 
+            Departing from the mainly upbeat pop production of its predecessors, Folklore consists of
+            mellow ballads driven by neo-classical instruments, pursuing indie folk, alternative rock, 
+            and electroacoustic styles. Influenced by loneliness during quarantine, Swift explores themes of 
+            escapism, empathy, nostalgia and romanticism in the album, using a set of characters, fictional narratives, 
+            and story arcs, in contrast to the autobiographical tone of her previous projects. 
+            The title was inspired by the lasting legacy of folk songs, whereas its visual aesthetic reflects
+            cottagecore.
+        </center>
+        </div>
+        
+        <h2>
+            Change the red, green, and blue values in the table below to change the border color, background color, and border width of the paragraph above. <br>
+        </h2>
+        
+        
+        <center>
+        <table>
+            <tr>
+                    <th>Border Colors (0-255): </th>
+                    <th>Background Color (0-255): </th>
+                    <th>Border Width: </th>
+            </tr>
+            
+            <tr>
+                <th>
+                    R: <input type="text" id="Red_Border" value=""> <br>
+                    G: <input type="text" id="Green_Border" value=""> <br>
+                    B: <input type="text" id="Blue_Border" value="">
+                </th>
+                    
+                <th>
+                    R: <input type="text" id="Red_Background" value=""> <br>
+                    G: <input type="text" id="Green_Background" value=""> <br>
+                    B: <input type="text" id="Blue_Background" value=""> <br>
+                </th>
+                    
+                <th>
+                    Border Width: <input type="text" id="size_of_border" value=""> <br>
+                </th>
+            </tr>
+        </table>
+        <br>
+        <button onclick="change_style()">Apply Changes</button> 
+        <br>
+        </center>
+    </body>
+</html>
